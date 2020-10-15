@@ -6,6 +6,7 @@
   "browser": "dist/cyclist.umd.js",
   "devDependencies": {
     "ava": "^3.13.0",
+    "esm": "^3.2.25",
     "rollup": "^2.30.0"
   },
   "scripts": {
@@ -16,5 +17,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  }
 }
