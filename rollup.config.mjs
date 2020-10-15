@@ -1,11 +1,9 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import pkg from './package.json';
+import pkg from './load-package.cjs';
 
 export default [
 	// browser-friendly UMD build
 	{
-		input: 'src/main.js',
+		input: 'src/main.mjs',
 		output: {
 			name: 'cyclist',
 			file: pkg.browser,
@@ -20,7 +18,7 @@ export default [
 	// an array for the `output` option, where we can specify
 	// `file` and `format` for each target)
 	{
-		input: 'src/main.js',
+		input: 'src/main.mjs',
 		external: ['ms'],
 		output: [
 			{ file: pkg.main, format: 'cjs' },

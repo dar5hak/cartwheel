@@ -1,9 +1,9 @@
 {
   "name": "cyclist",
   "version": "1.0.0",
-  "main": "dist/how-long-till-lunch.cjs.js",
-  "module": "dist/how-long-till-lunch.esm.js",
-  "browser": "dist/how-long-till-lunch.umd.js",
+  "main": "dist/cyclist.cjs.js",
+  "module": "dist/cyclist.esm.js",
+  "browser": "dist/cyclist.umd.js",
   "devDependencies": {
     "ava": "^3.13.0",
     "rollup": "^2.30.0"
