@@ -1,8 +1,12 @@
 import test from "ava";
 import Cyclist from "..";
 
-test("Cyclist is exported correctly", (t) => {
+test("is a class", (t) => {
   t.is(typeof Cyclist, "function");
+
+  const list = new Cyclist();
+  t.is(typeof list, "object");
+  t.truthy(list); // because typeof null === "object"
 });
 
 test("returns an array on toArray()", (t) => {
