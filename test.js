@@ -1,5 +1,5 @@
 import test from 'ava';
-import cyclist from '..';
+import cyclist from '.';
 
 test('is a function', t => {
 	t.is(typeof cyclist, 'function');

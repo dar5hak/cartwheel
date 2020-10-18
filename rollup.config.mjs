@@ -3,7 +3,7 @@ import pkg from "./load-package.cjs";
 export default [
   // browser-friendly UMD build
   {
-    input: "src/main.js",
+    input: "main.js",
     output: {
       name: "cyclist",
       file: pkg.browser,
@@ -18,7 +18,7 @@ export default [
   // an array for the `output` option, where we can specify
   // `file` and `format` for each target)
   {
-    input: "src/main.js",
+    input: "main.js",
     external: ["ms"],
     output: [
       { file: pkg.main, format: "cjs", exports: "default" },
