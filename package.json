@@ -14,13 +14,16 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "xo && ava",
-    "pretest": "npm run build"
+    "pretest": "npm run build",
+    "prepublish": "npm run build"
   },
   "files": [
     "dist"
   ],
   "xo": {
-    "extensions": [".mjs"]
+    "extensions": [
+      ".mjs"
+    ]
   },
   "ava": {
     "require": [
