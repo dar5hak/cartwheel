@@ -1,25 +1,34 @@
 class CyclistIterator {
-  currentIndex = 0;
+  current = -1;
 
   constructor(elements) {
     this.elements = elements;
   }
 
   cycleBack() {
-    this.currentIndex =
-      this.currentIndex === this.elements.length ? 0 : this.currentIndex;
-    this.currentIndex =
-      this.currentIndex === -1 ? this.elements.length - 1 : this.currentIndex;
+    this.current = this.current === this.elements.length ? 0 : this.current;
+    this.current =
+      this.current < 0 ? this.elements.length - 1 : this.current;
   }
 
   next() {
+    this.current++;
     this.cycleBack();
-    return { value: this.elements[this.currentIndex++], done: false };
+    return { value: this.elements[this.current], done: false };
   }
 
   previous() {
+    this.current--;
     this.cycleBack();
-    return { value: this.elements[this.currentIndex--], done: false };
+    return { value: this.elements[this.current], done: false };
+  }
+
+  nextValue() {
+    return this.next().value;
+  }
+
+  previousValue() {
+    return this.previous().value;
   }
 }
 
