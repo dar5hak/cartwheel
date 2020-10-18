@@ -1,22 +1,22 @@
 import test from "ava";
-import Cyclist from "..";
+import cyclist from "..";
 
-test("is a class", (t) => {
-  t.is(typeof Cyclist, "function");
-
-  const list = new Cyclist();
-  t.is(typeof list, "object");
-  t.truthy(list); // because typeof null === "object"
+test("is a function", (t) => {
+  t.is(typeof cyclist, "function");
 });
 
-test("returns an array on toArray()", (t) => {
-  const list = new Cyclist();
-  t.true(Array.isArray(list.toArray()));
+test("returns an iterator object", (t) => {
+  const iterator = cyclist([42]);
+  t.is(typeof iterator.next, "function");
+  t.is(typeof iterator.previous, "function");
 });
 
-test("adds an element on add()", (t) => {
-  const list = new Cyclist();
-  list.add(42);
-  list.add(16);
-  t.deepEqual(list.toArray(), [42, 16]);
+test("should return the first element on the first next()", (t) => {
+  const iterator = cyclist([42, 16]);
+  t.is(iterator.next().value, 42);
+});
+
+test("should return the first element on the first previous()", (t) => {
+  const iterator = cyclist([42, 16]);
+  t.is(iterator.previous().value, 42);
 });

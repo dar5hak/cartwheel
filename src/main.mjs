@@ -1,13 +1,27 @@
-class Cyclist {
-  elements = [];
+class CyclistIterator {
+  currentIndex = 0;
 
-  add(element) {
-    this.elements.push(element);
+  constructor(elements) {
+    this.elements = elements;
   }
 
-  toArray() {
-    return this.elements;
+  next() {
+    this.currentIndex =
+      this.currentIndex === this.elements.length ? 0 : this.currentIndex;
+
+    return { value: this.elements[this.currentIndex++], done: false };
+  }
+
+  previous() {
+    this.currentIndex =
+      this.currentIndex === -1 ? this.elements.length - 1 : this.currentIndex;
+    return { value: this.elements[this.currentIndex--], done: false };
   }
 }
 
-export default Cyclist;
+function cyclist(iterable) {
+  const elements = Array.from(iterable);
+  return new CyclistIterator(elements);
+}
+
+export default cyclist;
