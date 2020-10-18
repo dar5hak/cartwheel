@@ -7,17 +7,21 @@
   "devDependencies": {
     "ava": "^3.13.0",
     "esm": "^3.2.25",
-    "rollup": "^2.30.0"
+    "rollup": "^2.30.0",
+    "xo": "^0.34.0"
   },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "ava",
+    "test": "xo && ava",
     "pretest": "npm run build"
   },
   "files": [
     "dist"
   ],
+  "xo": {
+    "extensions": [".mjs"]
+  },
   "ava": {
     "require": [
       "esm"
