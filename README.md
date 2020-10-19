@@ -1,23 +1,23 @@
-# cyclist.js 🚴‍♀️
+# cartwheel.js
 
 > A circular list you never knew you needed
 
-cyclist.js takes an array (or any array-like/iterable) and gives you a circular iterator. You can ask for the next or previous value any number of times, and it will keep cycling through the list.
+cartwheel.js takes an array (or any array-like/iterable) and gives you a circular iterator. You can ask for the next or previous value any number of times, and it will keep cycling through the list.
 
 ## Install
 
 ```sh
-npm install cyclist
+npm install cartwheel
 ```
 
 ## Usage
 
 ```js
-import cyclist from "cyclist";
+import cartwheel from "cartwheel";
 
 // Pass an iterable
 const items = ["Ed", "Edd", "Eddy"];
-const iterator = cyclist(items);
+const iterator = cartwheel(items);
 
 // Start cycling
 console.log(iterator.nextValue()); // Ed
@@ -46,7 +46,7 @@ console.log(iterator.previous()); // { value: 'Edd', done: false }
 
 ## Documentation
 
-`cyclist(iterable)` returns an iterator object with the following methods:
+`cartwheel(iterable)` returns an iterator object with the following methods:
 
 ### `next()`
 

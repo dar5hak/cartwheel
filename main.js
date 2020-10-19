@@ -1,4 +1,4 @@
-class CyclistIterator {
+class Iterator {
 	constructor(elements) {
 		this.elements = elements;
 		this.current = -1;
@@ -31,9 +31,9 @@ class CyclistIterator {
 	}
 }
 
-function cyclist(iterable) {
+function cartwheel(iterable) {
 	const elements = Array.from(iterable);
-	return new CyclistIterator(elements);
+	return new Iterator(elements);
 }
 
-export default cyclist;
+export default cartwheel;

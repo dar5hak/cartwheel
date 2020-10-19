@@ -1,9 +1,9 @@
 {
-  "name": "cyclist",
+  "name": "cartwheel",
   "version": "1.0.0",
-  "main": "dist/cyclist.cjs.js",
-  "module": "dist/cyclist.esm.js",
-  "browser": "dist/cyclist.umd.js",
+  "main": "dist/cartwheel.cjs.js",
+  "module": "dist/cartwheel.esm.js",
+  "browser": "dist/cartwheel.umd.js",
   "devDependencies": {
     "ava": "^3.13.0",
     "esm": "^3.2.25",

@@ -5,7 +5,7 @@ export default [
   {
     input: "main.js",
     output: {
-      name: "cyclist",
+      name: "cartwheel",
       file: pkg.browser,
       format: "umd",
     },
