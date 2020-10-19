@@ -5,6 +5,7 @@
   "main": "dist/cartwheel.cjs.js",
   "module": "dist/cartwheel.esm.js",
   "browser": "dist/cartwheel.umd.js",
+  "unpkg": "dist/cartwheel.umd.js",
   "devDependencies": {
     "ava": "^3.13.0",
     "esm": "^3.2.25",
