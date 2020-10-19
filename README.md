@@ -6,11 +6,25 @@ cartwheel takes an array (or any array-like/iterable) and gives you a circular i
 
 ## Install
 
+### npm
+
 ```sh
 npm install cartwheel
 ```
 
 **Note:** Ensure you have Node.js v14 or newer.
+
+### &lt;script&gt;
+
+```html
+<script src="https://unpkg.com/cartwheel@1.0.0"></script>
+```
+
+Or if you want to host it yourself, go to [releases](https://github.com/dar5hak/cartwheel/releases) and download _cartwheel.umd.js_. Then:
+
+```html
+<script src="cartwheel.umd.js"></script>
+```
 
 ## Usage
 
@@ -31,21 +45,17 @@ iterator.nextValue();
 iterator.nextValue();
 // Eddy
 
-
 // It‘s circular, remember?
 iterator.nextValue();
 // Ed
-
 
 // Standard ES iterator protocol if you like
 iterator.next();
 // { value: 'Edd', done: false }
 
-
 // `done` will always be false though
 iterator.next();
 // { value: 'Eddy', done: false }
-
 
 // Rewind
 iterator.previousValue();
@@ -54,11 +64,9 @@ iterator.previousValue();
 iterator.previousValue();
 // Ed
 
-
 // They see me rollin‘, they hatin‘
 iterator.previousValue();
 // Eddy
-
 
 // Iterator protocol again
 iterator.previous();
