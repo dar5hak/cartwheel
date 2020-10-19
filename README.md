@@ -6,13 +6,25 @@ cartwheel takes an array (or any array-like/iterable) and gives you a circular i
 
 ## Install
 
-### npm
+### As an npm package
 
 ```sh
 npm install cartwheel
 ```
 
-### &lt;script&gt;
+Then import it:
+
+```js
+const cartwheel = require('cartwheel');
+```
+
+Or if you use ES module syntax:
+
+```js
+import cartwheel from "cartwheel";
+```
+
+### As a `<script>`
 
 ```html
 <script src="https://unpkg.com/cartwheel@1.1.0"></script>
@@ -24,11 +36,23 @@ Or if you want to host it yourself, go to [releases](https://github.com/dar5hak/
 <script src="cartwheel.umd.min.js"></script>
 ```
 
+### As an ES Module (modern browsers)
+
+```js
+import cartwheel from 'https://unpkg.com/cartwheel@1.1.0/dist/cartwheel.esm.min.js';
+```
+
+Or if you want to host it yourself, go to [releases](https://github.com/dar5hak/cartwheel/releases) and download _cartwheel.esm.min.js_. Then:
+
+```js
+import cartwheel from 'cartwheel.esm.min.js';
+```
+
+**Note:** This should also work with Deno, but I haven‘t tested it.
+
 ## Usage
 
 ```js
-import cartwheel from "cartwheel";
-
 // Pass an iterable
 const items = ["Ed", "Edd", "Eddy"];
 const iterator = cartwheel(items);
