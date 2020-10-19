@@ -1,7 +1,7 @@
 {
   "name": "cartwheel",
   "description": "A circular list you never knew you needed",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/cartwheel.cjs.js",
   "module": "dist/cartwheel.esm.js",
   "moduleMin": "dist/cartwheel.esm.min.js",
