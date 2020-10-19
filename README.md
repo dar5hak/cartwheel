@@ -1,1 +1,83 @@
-# cyclist.js
+# cyclist.js 🚴‍♀️
+
+> A circular list you never knew you needed
+
+cyclist.js takes an array (or any array-like/iterable) and gives you a circular iterator. You can ask for the next or previous value any number of times, and it will keep cycling through the list.
+
+## Install
+
+```sh
+npm install cyclist
+```
+
+## Usage
+
+```js
+import cyclist from "cyclist";
+
+// Pass an iterable
+const items = ["Ed", "Edd", "Eddy"];
+const iterator = cyclist(items);
+
+// Start cycling
+console.log(iterator.nextValue()); // Ed
+console.log(iterator.nextValue()); // Edd
+console.log(iterator.nextValue()); // Eddy
+
+// It‘s circular, remember?
+console.log(iterator.nextValue()); // Ed
+
+// ES iterator-style if you like
+console.log(iterator.next()); // { value: 'Edd', done: false }
+
+// `done` will always be false though
+console.log(iterator.next()); // { value: 'Eddy', done: false }
+
+// Paddle backwards
+console.log(iterator.previousValue()); // Edd
+console.log(iterator.previousValue()); // Ed
+
+// They see me rollin‘, they hatin‘
+console.log(iterator.previousValue()); // Eddy
+
+// Iterator-style again
+console.log(iterator.previous()); // { value: 'Edd', done: false }
+```
+
+## Documentation
+
+`cyclist(iterable)` returns an iterator object with the following methods:
+
+### `next()`
+
+Returns the next item to what you last accessed. If it is the first call, returns the first item in the iterable. `done` is always false.
+
+Example: `{ value: 42, done: false }`
+
+### `nextValue()`
+
+Same as `next()`, but returns the `value` directly.
+
+### `previous()`
+
+Returns the previous item to what you last accessed. If it is the first call, returns the last item in the iterable. `done` is always false.
+
+Example: `{ value: 1337, done: false }`
+
+### `previousValue()`
+
+Same as `previous()`, but returns the `value` directly.
+
+## FAQ
+
+### Where would I need this?
+
+Anywhere you want to iterate a list of items in a circular “round robin” fashion. Think keyboard-navigable menus, tabs, carousels and typeahead suggestions.
+
+### Does it work with maps, sets or node lists?
+
+Yes. It works with anything that is compatible with [`Array.from()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+
+### Is it like a circular doubly linked list?
+
+Kind of. It does offer a similar API, but the implementation looks nothing like a linked list.
