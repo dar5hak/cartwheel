@@ -1,8 +1,8 @@
-# cartwheel.js
+# cartwheel
 
 > A circular list you never knew you needed
 
-cartwheel.js takes an array (or any array-like/iterable) and gives you a circular iterator. You can ask for the next or previous value any number of times, and it will keep cycling through the list.
+cartwheel takes an array (or any array-like/iterable) and gives you a circular iterator. You can ask for the next or previous value any number of times, and it will keep cycling through the list.
 
 ## Install
 
