@@ -10,6 +10,8 @@ cartwheel takes an array (or any array-like/iterable) and gives you a circular i
 npm install cartwheel
 ```
 
+**Note:** Ensure you have Node.js v14 or newer.
+
 ## Usage
 
 ```js
