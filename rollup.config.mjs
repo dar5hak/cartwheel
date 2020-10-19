@@ -1,14 +1,23 @@
 import pkg from "./load-package.cjs";
+import { terser } from "rollup-plugin-terser";
 
 export default [
   // browser-friendly UMD build
   {
     input: "main.js",
-    output: {
-      name: "cartwheel",
-      file: pkg.browser,
-      format: "umd",
-    },
+    output: [
+      {
+        name: "cartwheel",
+        file: pkg.browser,
+        format: "umd",
+      },
+      {
+        name: "cartwheel",
+        file: pkg.browserMin,
+        format: "umd",
+        plugins: [terser()],
+      },
+    ],
   },
 
   // CommonJS (for Node) and ES module (for bundlers) build.
@@ -22,6 +31,7 @@ export default [
     output: [
       { file: pkg.main, format: "cjs", exports: "default" },
       { file: pkg.module, format: "es" },
+      { file: pkg.moduleMin, format: "es", plugins: [terser()] },
     ],
   },
 ];

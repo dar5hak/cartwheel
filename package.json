@@ -4,12 +4,15 @@
   "version": "1.0.0",
   "main": "dist/cartwheel.cjs.js",
   "module": "dist/cartwheel.esm.js",
+  "moduleMin": "dist/cartwheel.esm.min.js",
   "browser": "dist/cartwheel.umd.js",
-  "unpkg": "dist/cartwheel.umd.js",
+  "browserMin": "dist/cartwheel.umd.min.js",
+  "unpkg": "dist/cartwheel.umd.min.js",
   "devDependencies": {
     "ava": "^3.13.0",
     "esm": "^3.2.25",
     "rollup": "^2.30.0",
+    "rollup-plugin-terser": "^7.0.2",
     "xo": "^0.34.0"
   },
   "scripts": {
