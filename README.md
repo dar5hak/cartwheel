@@ -15,7 +15,7 @@ npm install cartwheel
 ### &lt;script&gt;
 
 ```html
-<script src="https://unpkg.com/cartwheel@1.0.0"></script>
+<script src="https://unpkg.com/cartwheel@1.1.0"></script>
 ```
 
 Or if you want to host it yourself, go to [releases](https://github.com/dar5hak/cartwheel/releases) and download _cartwheel.umd.min.js_. Then:
