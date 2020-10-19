@@ -19,29 +19,48 @@ import cartwheel from "cartwheel";
 const items = ["Ed", "Edd", "Eddy"];
 const iterator = cartwheel(items);
 
-// Start cycling
-console.log(iterator.nextValue()); // Ed
-console.log(iterator.nextValue()); // Edd
-console.log(iterator.nextValue()); // Eddy
+// Start iterating
+iterator.nextValue();
+// Ed
+
+iterator.nextValue();
+// Edd
+
+iterator.nextValue();
+// Eddy
+
 
 // It‘s circular, remember?
-console.log(iterator.nextValue()); // Ed
+iterator.nextValue();
+// Ed
 
-// ES iterator-style if you like
-console.log(iterator.next()); // { value: 'Edd', done: false }
+
+// Standard ES iterator protocol if you like
+iterator.next();
+// { value: 'Edd', done: false }
+
 
 // `done` will always be false though
-console.log(iterator.next()); // { value: 'Eddy', done: false }
+iterator.next();
+// { value: 'Eddy', done: false }
 
-// Paddle backwards
-console.log(iterator.previousValue()); // Edd
-console.log(iterator.previousValue()); // Ed
+
+// Rewind
+iterator.previousValue();
+// Edd
+
+iterator.previousValue();
+// Ed
+
 
 // They see me rollin‘, they hatin‘
-console.log(iterator.previousValue()); // Eddy
+iterator.previousValue();
+// Eddy
 
-// Iterator-style again
-console.log(iterator.previous()); // { value: 'Edd', done: false }
+
+// Iterator protocol again
+iterator.previous();
+// { value: 'Edd', done: false }
 ```
 
 ## Documentation
