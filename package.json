@@ -9,6 +9,7 @@
   "browserMin": "dist/cartwheel.umd.min.js",
   "unpkg": "dist/cartwheel.umd.min.js",
   "devDependencies": {
+    "@skypack/package-check": "^0.2.2",
     "ava": "^3.13.0",
     "esm": "^3.2.25",
     "rollup": "^2.30.0",
