@@ -28,6 +28,12 @@
     "pretest": "npm run build",
     "prepack": "npm run build"
   },
+  "keywords": ["circular", "list", "linked", "cycle", "round", "robin"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dar5hak/cartwheel.git"
+  },
+  "license": "MIT",
   "files": [
     "dist"
   ],
